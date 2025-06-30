@@ -1,25 +1,4 @@
-(function () {
-   emailjs.init("2BC7ceRLeK4YF_Kg4");
- })();
 
- document
-   .getElementById("contact-form")
-   .addEventListener("submit", function (e) {
-     e.preventDefault();
-
-     emailjs.sendForm("123456789", "template_cejr7yv", this).then(
-       function () {
-         document.getElementById("status-message").innerText =
-           "Message sent successfully!";
-       },
-       function (error) {
-         document.getElementById("status-message").innerText =
-           "Failed to send message: " + error.text;
-       }
-     );
-
-     this.reset();
-   });
 
  function toggleMenu() {
    const nav = document.getElementById("navLinks");
